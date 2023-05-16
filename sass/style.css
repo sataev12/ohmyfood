@@ -2,10 +2,67 @@
     margin: 0px;
 }
 
-.fa-circle-notch{
-    display: grid;
-    
-    
+.lettre{
+    color: #484848;
+    font-size: 80px;
+    letter-spacing: 15px;
+    margin-bottom: 15px;
+    animation: flash 700ms linear infinite;
+}
+
+.lettre:nth-child(1) {
+    animation-delay: 100ms;
+}
+
+.lettre:nth-child(2) {
+    animation-delay: 200ms;
+}
+
+.lettre:nth-child(3) {
+    animation-delay: 300ms;
+}
+
+.lettre:nth-child(4) {
+    animation-delay: 400ms;
+}
+
+.lettre:nth-child(5) {
+    animation-delay: 500ms;
+}
+
+.lettre:nth-child(6) {
+    animation-delay: 600ms;
+}
+
+.lettre:nth-child(7) {
+    animation-delay: 700ms;
+}
+
+.lettre:nth-child(8) {
+    animation-delay: 800ms;
+}
+
+.lettre:nth-child(9) {
+    animation-delay: 900ms;
+}
+
+.lettre:nth-child(10) {
+    animation-delay: 1s;
+}
+
+@keyframes flash {
+    0%{
+        color: #FFF900;
+        text-shadow: 0 0 7px #FFF900;
+    }
+    90%{
+        color: #484848;
+        text-shadow: none;
+    }
+    100%{
+        color: #FFF900;
+        text-shadow: 0 0 7px #FFF900;
+    }
 }
 
 .loaderR{
@@ -15,7 +72,7 @@
     inset: 0;
     z-index: 1;
     opacity: 0.7;
-    animation: disappear 150ms 1s;
+    animation: disappear 150ms 1500ms;
     animation-fill-mode: forwards;
     transform-origin: top;
     display: flex;
@@ -75,6 +132,9 @@
 
 }
 
+.titreBlock{
+    font-size: 20px;
+}
 
 .tittrePrincipal{
     display: flex;
@@ -83,6 +143,9 @@
 
 .tittrePrincipal h1{
     font-style: italic;
+    margin-bottom: 10px;
+    font-size: 37px;
+    margin-top: 18px;
 }
 
 .sousTitre{
@@ -94,6 +157,7 @@
     height: 3rem;
     align-items: center;
     justify-content: center;
+    font-size: 12px;
 }
 
 .sousTitre h3{
@@ -393,6 +457,42 @@
         font-style: italic;
     }
 
+    .tittrePrincipal h1{
+        font-size: revert;
+    }
+
+    .lettre{
+        color: #484848;
+        font-size: 30px;
+        letter-spacing: 5px;
+        margin-bottom: 15px;
+        animation: flash 700ms linear infinite;
+    }
+
+    .fa-heart {
+        font-size: 2rem;
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .coeurSolid{
+        color:transparent;
+        background-image: linear-gradient(to top, rgba(147, 86, 220, 1), rgba(255, 121, 218, 1));
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0;
+        transition: all 1ms ease-in-out;
+    
+    
+    }
+    
+    .cardTitle:hover .coeurSolid {
+        opacity: 1;
+        transform: translateY(-50%) scale(1);
+    }
+
     .sousTitre{
         display: flex;
         justify-content: center;
@@ -429,6 +529,7 @@
         display: flex;
         flex-direction: column;
         gap: 0px;
+        font-size: 19px;
     }
 
     .tittreSecondaire p {

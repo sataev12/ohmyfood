@@ -77,6 +77,30 @@ body .LaPalette .entree .prix {
 body .LaPalette .entree span {
   font-weight: 400;
 }
+body .titrePalette {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+body .fa-heart {
+  font-size: 2rem;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 6%;
+}
+body .coeurSolid {
+  color: transparent;
+  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+body .titrePalette:hover .coeurSolid {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
 body .blockButton {
   display: flex;
   justify-content: space-around;
@@ -197,6 +221,16 @@ body footer div p {
     font-weight: 200;
     padding-left: 3%;
     padding-right: 3%;
+  }
+  body .LaPalette .entree .prix p {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 1.1rem;
+  }
+  body .LaPalette .entree .prix menuItem {
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   body .LaPalette .entree span {
     font-weight: 400;

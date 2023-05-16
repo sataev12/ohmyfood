@@ -62,11 +62,9 @@ body .LaPalette .entree {
   margin-right: 2%;
   line-height: 69%;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 body .LaPalette .entree h4 {
-  padding-left: 3%;
-  text-overflow: ellipsis;
+  padding-left: 6%;
 }
 body .LaPalette .entree .prix {
   display: flex;
@@ -76,11 +74,6 @@ body .LaPalette .entree .prix {
   padding-left: 3%;
   padding-right: 3%;
   display: flex;
-  text-overflow: ellipsis;
-}
-body .LaPalette .entree .prix .textOverflow {
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 body .LaPalette .entree .titrePlat {
   width: 16rem;
@@ -154,6 +147,30 @@ body .menuItem .fa-check {
   color: #99E2D0;
   margin: 1rem;
   padding: 2px;
+}
+body .titrePalette {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+body .fa-heart {
+  font-size: 2rem;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 6%;
+}
+body .coeurSolid {
+  color: transparent;
+  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+body .titrePalette:hover .coeurSolid {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
 }
 body .entree:hover .menuItem {
   margin-right: 1rem;
@@ -232,6 +249,9 @@ body footer div p {
     width: 100%;
     margin-left: 0%;
   }
+  body .titrePalette {
+    justify-content: flex-start;
+  }
   body .LaPalette {
     background-color: #F6F6F6;
     border-radius: 40px 40px 0 0;
@@ -279,9 +299,25 @@ body footer div p {
     font-weight: 200;
     padding-left: 3%;
     padding-right: 3%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  body .LaPalette .entree .prix p {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 1.1rem;
+  }
+  body .LaPalette .entree .prix menuItem {
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   body .LaPalette .entree span {
+    width: 1rem;
     font-weight: 400;
+  }
+  body .entree:hover .menuItem {
+    margin-right: 1.5rem;
   }
   body #test {
     display: flex;

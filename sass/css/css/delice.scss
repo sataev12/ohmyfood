@@ -84,6 +84,36 @@ body{
             }
     }
 
+
+    .titrePalette{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .fa-heart{
+        font-size: 2rem;
+        position: absolute;
+        transform: translateY(-50%);
+        top: 6%;
+    }
+    
+    .coeurSolid{
+        color: transparent;
+        background-image: linear-gradient(to top, rgba(147, 86, 220, 1), rgba(255, 121, 218, 1));
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0;
+        transition: all 200ms ease-in-out;
+    }
+
+    .titrePalette:hover .coeurSolid {
+        opacity: 1;
+        transform: translateY(-50%) scale(1);
+    }
+
+
     .blockButton{
         display: flex;
         justify-content: space-around;
@@ -216,6 +246,18 @@ body{
                             font-weight: 200;
                             padding-left: 3%;
                             padding-right: 3%;
+                            & p{
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                line-height: 1.1rem;
+                            }
+                            
+                            & menuItem{
+                                
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
                         }
                         span{
                             font-weight: 400;

@@ -55,6 +55,7 @@ body{
                 font-size: 100%;
                 padding-left: 3%;
             }
+
             .entree{
                 display: flex;
                 flex-direction: column;
@@ -77,6 +78,9 @@ body{
                         padding-right: 3%;
                         display: flex;
                     }
+                    .titrePlat{
+                        width: 16rem;
+                    }
                     span{
                         font-weight: 400;
                     }
@@ -84,6 +88,34 @@ body{
             }
     }
 
+
+    .titrePalette{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .fa-heart{
+        font-size: 2rem;
+        position: absolute;
+        transform: translateY(-50%);
+        top: 5.5%;
+    }
+    
+    .coeurSolid{
+        color: transparent;
+        background-image: linear-gradient(to top, rgba(147, 86, 220, 1), rgba(255, 121, 218, 1));
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0;
+        transition: all 200ms ease-in-out;
+    }
+
+    .titrePalette:hover .coeurSolid {
+        opacity: 1;
+        transform: translateY(-50%) scale(1);
+    }
 
 
     .blockButton{
@@ -218,8 +250,23 @@ body{
                             font-weight: 200;
                             padding-left: 3%;
                             padding-right: 3%;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            & p{
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                line-height: 1.1rem;
+                            }
+                            
+                            & menuItem{
+                                
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
                         }
                         span{
+                            width: 1rem;
                             font-weight: 400;
                         }
                         
