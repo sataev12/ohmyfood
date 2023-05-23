@@ -1,11 +1,15 @@
 body h1 {
   font-style: italic;
+  font-family: shrikhand;
 }
 body .titreOne {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 45%;
+}
+body .titreOne h1 {
+  font-family: shrikhand;
 }
 body img {
   object-fit: cover;

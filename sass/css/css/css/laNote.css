@@ -1,11 +1,15 @@
 body h1 {
   font-style: italic;
+  font-family: shrikhand;
 }
 body .titreOne {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 45%;
+}
+body .titreOne h1 {
+  font-family: shrikhand;
 }
 body img {
   object-fit: cover;
@@ -61,6 +65,7 @@ body .LaPalette .entree {
   margin-left: 2%;
   margin-right: 2%;
   line-height: 69%;
+  overflow: hidden;
 }
 body .LaPalette .entree h4 {
   padding-left: 3%;
@@ -80,6 +85,73 @@ body .LaPalette .entree .titrePlat {
 body .LaPalette .entree span {
   font-weight: 400;
 }
+@keyframes apparence {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+body .entree {
+  animation: apparence 1s;
+  transform: scale(0);
+  animation-fill-mode: forwards;
+}
+body .delay-0 {
+  animation-delay: 100ms;
+}
+body .delay-1 {
+  animation-delay: 200ms;
+}
+body .delay-2 {
+  animation-delay: 300ms;
+}
+body .delay-3 {
+  animation-delay: 400ms;
+}
+body .delay-4 {
+  animation-delay: 500ms;
+}
+body .delay-5 {
+  animation-delay: 600ms;
+}
+body .delay-6 {
+  animation-delay: 700ms;
+}
+body .delay-7 {
+  animation-delay: 800ms;
+}
+body .delay-8 {
+  animation-delay: 900ms;
+}
+body .delay-9 {
+  animation-delay: 1s;
+}
+body .menuItem {
+  display: flex;
+  margin-right: -2.5rem;
+  width: 2.5rem;
+  padding-right: 1.4rem;
+  gap: 15.2px;
+}
+body .menuItem .menuItem_check {
+  background-color: #99E2D0;
+  display: flex;
+  margin-top: -28px;
+  margin-right: -15px;
+  border-radius: 0 1rem 1rem 0;
+  align-items: center;
+  padding-right: 1.5rem;
+}
+body .menuItem .fa-check {
+  border: 1px solid white;
+  border-radius: 20px;
+  background-color: white;
+  color: #99E2D0;
+  margin: 1rem;
+  padding: 2px;
+}
 body .titrePalette {
   display: flex;
   justify-content: center;
@@ -90,7 +162,7 @@ body .fa-heart {
   font-size: 2rem;
   position: absolute;
   transform: translateY(-50%);
-  top: 5.5%;
+  top: 6%;
 }
 body .coeurSolid {
   color: transparent;
@@ -103,6 +175,10 @@ body .coeurSolid {
 body .titrePalette:hover .coeurSolid {
   opacity: 1;
   transform: translateY(-50%) scale(1);
+}
+body .entree:hover .menuItem {
+  margin-right: 1rem;
+  transition: all 500ms;
 }
 body .blockButton {
   display: flex;
@@ -177,6 +253,9 @@ body footer div p {
     width: 100%;
     margin-left: 0%;
   }
+  body .titrePalette {
+    justify-content: flex-start;
+  }
   body .LaPalette {
     background-color: #F6F6F6;
     border-radius: 40px 40px 0 0;
@@ -240,6 +319,9 @@ body footer div p {
   body .LaPalette .entree span {
     width: 1rem;
     font-weight: 400;
+  }
+  body .entree:hover .menuItem {
+    margin-right: 1.5rem;
   }
   body #test {
     display: flex;

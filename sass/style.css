@@ -52,16 +52,16 @@
 
 @keyframes flash {
     0%{
-        color: #FFF900;
-        text-shadow: 0 0 7px #FFF900;
+        color: #FF79DA ;
+        text-shadow: 0 0 7px #FF79DA ;
     }
     90%{
         color: #484848;
         text-shadow: none;
     }
     100%{
-        color: #FFF900;
-        text-shadow: 0 0 7px #FFF900;
+        color: #FF79DA ;
+        text-shadow: 0 0 7px #FF79DA ;
     }
 }
 
@@ -71,7 +71,7 @@
     position: fixed;
     inset: 0;
     z-index: 1;
-    opacity: 0.7;
+    opacity: 0.95;
     animation: disappear 150ms 1500ms;
     animation-fill-mode: forwards;
     transform-origin: top;
@@ -146,6 +146,7 @@
     margin-bottom: 10px;
     font-size: 37px;
     margin-top: 18px;
+    font-family: shrikhand;
 }
 
 .sousTitre{
