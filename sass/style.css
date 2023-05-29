@@ -681,7 +681,7 @@
         font-style: italic;
    }
 
-   #icon{
+   .icon{
         display: flex;
         align-items: center;
    }
